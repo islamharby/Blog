@@ -23,6 +23,21 @@ class CreateSettingsTable extends Migration
             $table->boolean('active')->default(true);
             $table->timestamps();
         });
+
+        Setting::create([
+            'name' => 'MAIN_COLOR',
+            'value' => '#00796b',
+            'title' => 'Main color',
+            'type' => 'color',
+        ]);
+
+        Setting::create([
+            'name' => 'DARK_COLOR',
+            'value' => '#455a64',
+            'title' => 'Dark color',
+            'type' => 'color',
+        ]);
+        
     }
 
     /**

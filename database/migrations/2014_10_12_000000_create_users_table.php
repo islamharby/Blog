@@ -27,6 +27,16 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        User::create([
+            'firstName' => 'Islam',
+            'lastName' => 'Harby',
+            'email' => 'admin@gmail.com',
+            'jobTitle' => 'Full-stack web developer',
+            'password' => bcrypt('123456'),
+            'role' => 'admin',
+            'gender' => 'male'
+        ]);
     }
 
     /**
